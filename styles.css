@@ -1,0 +1,278 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: #343a40; /* Dark gray for general text color */
+}
+
+/* Logo Section */
+.logo-section {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(246, 246, 136);
+}
+
+.logo {
+    max-width: max-content;
+    max-height: max-content;
+}
+
+/* Navbar */
+.premium-navbar {
+    background-color: rgb(0, 0, 0);
+}
+
+.nav-link {
+    color: #ffffff !important; /* White text for navbar links */
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #f6f465, #f6f465); /* Example gradient */
+    height: 60vh;
+    color: #ffffff; /* White text for hero section */
+    text-align: center;
+}
+
+/* Product Cards */
+.product-card {
+    border: none;
+    background-color: #2c2d2d; /* Dark background for product cards */
+    color: #ffffff; /* White text for product cards */
+}
+
+.product-card .btn {
+    background-color: #000000; /* Black button for product cards */
+    border: none;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f6f465; /* Contact section background */
+    padding: 40px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #000000; /* Black footer */
+    color: #ffffff; /* White text for footer */
+}
+
+/* Sidebar Styles */
+.cart-sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #b6b300; /* Sidebar background */
+    color: #ffffff; /* White text for sidebar */
+    transition: right 0.3s;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.sidebar-header {
+    padding: 15px;
+    border-bottom: 1px solid #2c2d2d; /* Divider color */
+}
+
+.sidebar-footer {
+    padding: 15px;
+    border-top: 1px solid #2c2d2d; /* Divider color */
+}
+
+.cart-items-container {
+    padding: 15px;
+}
+
+.cart-item {
+    background-color: #a9c8f1; /* Set a single color for all cart items */
+    color: #343a40; /* Dark gray text for visibility */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Notification Bell Icon */
+#notification-bell {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+}
+
+#notification-bell.notify {
+    color: red;
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Cart Modal Background */
+.modal-content {
+    background-color: #f8f9fa; /* Light gray for cart background */
+}
+
+/* Total Amount Styling */
+#checkout-total {
+    color: #ffffff; /* White text for total */
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff; /* Blue background for total */
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Remove Button Styling */
+.cart-item button {
+    background-color: #eae7e7; /* Light gray for remove button */
+    color: #ffffff; /* White text for button */
+}
+
+.cart-item button:hover {
+    background-color: #c82333; /* Darker shade on hover */
+}
+
+/* Modal Background Colors */
+.modal-body {
+    background-color: #1b263b; /* Keep modal body dark */
+}
+
+.modal-header {
+    background-color: #1b263b; /* Keep modal header dark */
+}
+
+.modal-footer {
+    background-color: #1b263b; /* Keep modal footer dark */
+}
+
+/* Responsive Footer */
+.footer {
+    background-color: black; /* Ensure the footer is black */
+}
+h1{
+    color: #000000;
+}
+h2{
+    color: white;
+}
+h3{
+    color: white;
+}
+
+.hero-section {
+    background-image: url('./background.jpeg');  /* Set your logo as the background image */
+    background-size: 500px;                /* Cover the entire hero section */
+    background-position: center;           /* Center the background image */
+    background-repeat: no-repeat;
+    width: 100;          /* Prevent the image from repeating */
+    height: 500px;                        /* Set the height of the section to full viewport height */
+    color: white;                         /* Change text color for better visibility */
+    position: relative;                   /* Position relative for child elements */
+    display: flex;                        /* Flexbox to center content */
+    align-items: center;                  /* Center vertically */
+    justify-content: center;              /* Center horizontally */
+}
+
+.logo {
+    max-width: 50px;                    /* Adjust logo size if needed */
+}
+.navbar .logo {
+    width: 65px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+.hero-section {
+    height: 100vh; /* Full height of the viewport */
+    background-image: url('./2024\ Bag.jpg'); /* Replace with your background image */
+    background-size: cover; /* Cover the whole section */
+    background-position: center; /* Center the background image */
+    position: relative; /* Position relative to allow absolute positioning inside */
+}
+
+.hero-section .text-center {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+/* Change navbar background color */
+.premium-navbar {
+    background-color: #343a40; /* Example background color */
+}
+
+/* Customize hamburger icon color */
+.navbar-toggler {
+    border-color: #ffffff; /* Change border color of the toggler button */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Custom icon color */
+}
+
+/* Change the text color of the navbar links */
+.navbar-nav .nav-link {
+    color: #ffffff; /* Change the link color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+.category-tag {
+    margin: 5px;
+    display: inline-block;
+}
+/* Product Card Styles */
+.card {
+    width: 300px;      /* Fixed width for consistency */
+    height: 450px;     /* Fixed height to align all cards */
+    margin: auto;      /* Center align the cards horizontally */
+    overflow: hidden;  /* Ensure no content overflows */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Image */
+.card-img-top {
+    height: 250px;     /* Fix the height of the image */
+    object-fit: cover; /* Ensure the image scales nicely */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Card Body */
+.card-body {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Button Group (Aligned at Bottom) */
+.input-group {
+    margin-top: auto;
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
