@@ -13,8 +13,8 @@ body {
 }
 
 .logo {
-    max-width: max-content;
-    max-height: max-content;
+    max-width: 50px; /* Adjust logo size if needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Navbar */
@@ -32,10 +32,15 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to right, #f6f465, #f6f465); /* Example gradient */
-    height: 60vh;
-    color: #ffffff; /* White text for hero section */
-    text-align: center;
+    background-image: url('./2024 Bag.jpg'); /* Set your logo as the background image */
+    background-size: cover; /* Cover the whole section */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Full height of the viewport */
+    color: white; /* Change text color for better visibility */
+    position: relative; /* Position relative for child elements */
+    display: flex; /* Flexbox to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
 }
 
 /* Product Cards */
@@ -47,7 +52,6 @@ body {
 
 .product-card .btn {
     background-color: #000000; /* Black button for product cards */
-    border: none;
 }
 
 /* Contact Section */
@@ -80,14 +84,9 @@ body {
     right: 0;
 }
 
-.sidebar-header {
+.sidebar-header, .sidebar-footer {
     padding: 15px;
     border-bottom: 1px solid #2c2d2d; /* Divider color */
-}
-
-.sidebar-footer {
-    padding: 15px;
-    border-top: 1px solid #2c2d2d; /* Divider color */
 }
 
 .cart-items-container {
@@ -149,98 +148,26 @@ body {
 }
 
 /* Modal Background Colors */
-.modal-body {
-    background-color: #1b263b; /* Keep modal body dark */
+.modal-body, .modal-header, .modal-footer {
+    background-color: #1b263b; /* Keep modal dark */
 }
 
-.modal-header {
-    background-color: #1b263b; /* Keep modal header dark */
-}
-
-.modal-footer {
-    background-color: #1b263b; /* Keep modal footer dark */
+/* Heading Styles */
+h1, h2, h3, h5, label {
+    color: white; /* Default heading and label color */
 }
 
 /* Responsive Footer */
 .footer {
     background-color: black; /* Ensure the footer is black */
 }
-h1{
-    color: #000000;
-}
-h2{
-    color: white;
-}
-h3{
-    color: white;
-}
 
-.hero-section {
-    background-image: url('./background.jpeg');  /* Set your logo as the background image */
-    background-size: 500px;                /* Cover the entire hero section */
-    background-position: center;           /* Center the background image */
-    background-repeat: no-repeat;
-    width: 100;          /* Prevent the image from repeating */
-    height: 500px;                        /* Set the height of the section to full viewport height */
-    color: white;                         /* Change text color for better visibility */
-    position: relative;                   /* Position relative for child elements */
-    display: flex;                        /* Flexbox to center content */
-    align-items: center;                  /* Center vertically */
-    justify-content: center;              /* Center horizontally */
-}
-
-.logo {
-    max-width: 50px;                    /* Adjust logo size if needed */
-}
-.navbar .logo {
-    width: 65px; /* Adjust the width of the logo */
-    height: auto; /* Maintain aspect ratio */
-}
-.hero-section {
-    height: 100vh; /* Full height of the viewport */
-    background-image: url('./2024\ Bag.jpg'); /* Replace with your background image */
-    background-size: cover; /* Cover the whole section */
-    background-position: center; /* Center the background image */
-    position: relative; /* Position relative to allow absolute positioning inside */
-}
-
-.hero-section .text-center {
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-}
-
-/* Change navbar background color */
-.premium-navbar {
-    background-color: #343a40; /* Example background color */
-}
-
-/* Customize hamburger icon color */
-.navbar-toggler {
-    border-color: #ffffff; /* Change border color of the toggler button */
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Custom icon color */
-}
-
-/* Change the text color of the navbar links */
-.navbar-nav .nav-link {
-    color: #ffffff; /* Change the link color */
-}
-
-.navbar-nav .nav-link:hover {
-    color: #ffcc00; /* Change color on hover */
-}
-.category-tag {
-    margin: 5px;
-    display: inline-block;
-}
 /* Product Card Styles */
 .card {
-    width: 300px;      /* Fixed width for consistency */
-    height: 450px;     /* Fixed height to align all cards */
-    margin: auto;      /* Center align the cards horizontally */
-    overflow: hidden;  /* Ensure no content overflows */
+    width: 300px; /* Fixed width for consistency */
+    height: 450px; /* Fixed height to align all cards */
+    margin: auto; /* Center align the cards horizontally */
+    overflow: hidden; /* Ensure no content overflows */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -251,7 +178,7 @@ h3{
 
 /* Card Image */
 .card-img-top {
-    height: 250px;     /* Fix the height of the image */
+    height: 250px; /* Fix the height of the image */
     object-fit: cover; /* Ensure the image scales nicely */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -275,4 +202,76 @@ h3{
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Notification Styles */
+.notification {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+/* Add this CSS for animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.bounce {
+    animation: bounce 0.5s;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height to maintain aspect ratio */
+    }
+    
+    .hero-section {
+        height: 50vh; /* Adjust hero height on smaller screens */
+    }
+
+    .logo {
+        max-width: 40px; /* Adjust logo size on smaller screens */
+    }
+}
+.card-body {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align items at the bottom */
+    align-items: center; /* Center items horizontally */
+}
+
+.card .btn {
+    margin-top: 10px; /* Add some spacing above the button */
+}
+.shop-now-btn {
+    position: absolute; /* Make the button's position absolute */
+    bottom: 20px; /* Adjust this value to set the distance from the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Move it left by half its width to truly center it */
+    background-color: #007bff; /* Customize background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    font-size: 1rem; /* Set font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Optional: Hover Effect */
+.shop-now-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
