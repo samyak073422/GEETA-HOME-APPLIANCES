@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <title>GEETA HOME APPLIANCES</title>
 </head>
 <body>
@@ -41,7 +43,9 @@
             <li class="nav-item">
                 <button id="cart-btn" class="btn btn-outline-light" data-toggle="modal" data-target="#cartModal">
                     Cart (<span id="cart-count">0</span>)
+                    
                 </button>
+
             </li>
         </ul>
     </div>
@@ -49,10 +53,11 @@
 
 
 
+
 <!-- Hero Section -->
 <header class="hero-section d-flex align-items-center justify-content-center" id="home">
     <div class="text-center flex-grow-1 d-flex align-items-end"> <!-- This div takes up space and aligns the button at the bottom -->
-        <a href="#products" class="btn btn-primary mt-3 mb-4">Shop Now</a> <!-- Added mb-4 for spacing at the bottom -->
+        <a href="#products" class="btn btn-primary mt-3 mb-4 shop-now-btn">Shop Now</a>
     </div>
 </header>
 
@@ -65,14 +70,14 @@
     <div class="row">
         <div class="col-md-4" >
             <div class="card">
-                <img src="./pressure cooker/PC!.jpg" class="card-img-top" alt="PRESSURE COOKER">
+                <img src="./PC!.jpg" class="card-img-top" alt="PRESSURE COOKER">
                 <div class="card-body">
                     <h5 class="card-title">PRESSURE COOKER</h5>
                     <p class="card-text">THE RATE IS ACCORDING PER METER</p>
                     <div class="input-group mb-3">
                         <input type="number" class="form-control quantity" value="1" min="1" />
                         <div class="input-group-append">
-                            <button class="btn btn-primary add-to-cart" data-name="FINOLEX WIRE" data-price="1200">Add to Cart</button>
+                            <button class="btn btn-primary add-to-cart" data-name="PRESSURE-COOKER" data-price="1200">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -80,7 +85,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <img src="./pressure cooker/PC2.jpg" class="card-img-top" alt="GOLDMEDAL WIRE">
+                <img src="./PC2.jpg" class="card-img-top" alt="GOLDMEDAL WIRE">
                 <div class="card-body">
                     <h5 class="card-title">GOLDMEDAL WIRE</h5>
                     <p class="card-text">THE RATE IS ACCORDING PER METER</p>
@@ -100,7 +105,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card">
-                <img src="./pressure cooker/NS!.jpg" class="card-img-top" alt="NON-STICK">
+                <img src="./NS!.jpg" class="card-img-top" alt="NON-STICK">
                 <div class="card-body">
                     <h5 class="card-title">NON-STICK</h5>
                     <p class="card-text">Price per unit</p>
@@ -115,7 +120,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <img src="./pressure cooker/NS2.jpg" class="card-img-top" alt="NON-STICK">
+                <img src="./NS2.jpg" class="card-img-top" alt="NON-STICK">
                 <div class="card-body">
                     <h5 class="card-title">NON-STICK</h5>
                     <p class="card-text">Price per unit</p>
@@ -135,7 +140,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card">
-                <img src="./pressure cooker/PED1.jpg" class="card-img-top" alt="PEDSTAL-FAN">
+                <img src="./PED1.jpg" class="card-img-top" alt="PEDSTAL-FAN">
                 <div class="card-body">
                     <h5 class="card-title">PEDSTAL-FAN</h5>
                     <p class="card-text">PEDSTAL-FAN</p>
@@ -150,7 +155,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <img src="./pressure cooker/PED2.jpg" class="card-img-top" alt="PEDSTAL-FAN">
+                <img src="./PED2.jpg" class="card-img-top" alt="PEDSTAL-FAN">
                 <div class="card-body">
                     <h5 class="card-title">PEDSTAL-FAN</h5>
                     <p class="card-text">PEDSTAL-FAN</p>
@@ -186,7 +191,7 @@
     </div>
 
     <!-- Panel Lights Category -->
-    <h3></h3>Panel Lights</h3>
+    <h3>Panel Lights</h3>
     <div class="row">
         <div class="col-md-4">
             <div class="card">
@@ -221,7 +226,7 @@
             </div>
             <div class="modal-body">
                 <div id="cart-items" class="cart-items-container"></div>
-                <p>Total: <span id="checkout-total">₹0</span></p>
+                <p><h3>Total: <span id="checkout-total">₹0</span></h3></p>
             </div>
             <div class="modal-footer">
                 <button id="checkout-button" class="btn btn-success" data-toggle="modal" data-target="#addressModal">Proceed to Checkout</button>
@@ -273,11 +278,19 @@
     </div>
 </div>
 
-    <!-- Notification Bell Icon -->
-<div id="notification-bell" class="notify" style="display: none;">
-    <i class="fas fa-bell fa-lg"></i>
-    <span id="notification-count" class="badge badge-danger" style="display: none;">0</span>
+  <!-- Notification Bell -->
+  <div id="notification-bell" style="position: relative; display: none; cursor: pointer;">
+    <img src="bell-icon.png" alt="Notifications" width="30" height="30">
+    <span id="notification-count" 
+          style="position: absolute; top: -5px; right: -5px; 
+                 background-color: red; color: white; 
+                 border-radius: 50%; padding: 2px 5px; display: none;">
+    </span>
 </div>
+
+<!-- Include audio in your HTML -->
+<audio id="add-to-cart-sound" src="./cash-register-fake-88639.mp3" preload="auto"></audio>
+
 
     <!-- Contact Section -->
     <div class="contact-section" id="contact">
@@ -319,5 +332,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>
