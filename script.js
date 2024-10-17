@@ -102,3 +102,23 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     alert('Thank you for reaching out to us! We will get back to you shortly.');
     this.reset(); // Clear the form
 });
+const heroSection = document.querySelector('.hero-section');
+
+const images = [
+    './2024 Bag.jpg', // First image
+    './2024 Bag.jpg',   // Second image
+    './2024 Bag.jpg'    // Third image
+];
+
+let currentIndex = 0;
+
+function changeBackgroundImage() {
+    currentIndex = (currentIndex + 1) % images.length; // Loop through images
+    heroSection.style.backgroundImage = `url('${images[currentIndex]}')`; // Change background image
+}
+
+// Change image every 5 seconds (5000 milliseconds)
+setInterval(changeBackgroundImage, 5000);
+
+// Set the initial background image
+changeBackgroundImage();
