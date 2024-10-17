@@ -33,7 +33,7 @@ body {
 /* Hero Section */
 .hero-section {
     background-image: url('./2024 Bag.jpg'); /* Set your logo as the background image */
-    background-size: cover; /* Cover the whole section */
+    background-size: contain; /* Cover the whole section */
     background-position: center; /* Center the background image */
     height: 100vh; /* Full height of the viewport */
     color: white; /* Change text color for better visibility */
@@ -172,14 +172,14 @@ h1, h2, h3, h5, label {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 0px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Card Image */
 .card-img-top {
     height: 250px; /* Fix the height of the image */
-    object-fit: cover; /* Ensure the image scales nicely */
+    object-fit: fill; /* Ensure the image scales nicely */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -255,7 +255,7 @@ h1, h2, h3, h5, label {
 }
 
 .card .btn {
-    margin-top: 10px; /* Add some spacing above the button */
+    margin-top: 0px; /* Add some spacing above the button */
 }
 .shop-now-btn {
     position: absolute; /* Make the button's position absolute */
@@ -274,4 +274,70 @@ h1, h2, h3, h5, label {
 /* Optional: Hover Effect */
 .shop-now-btn:hover {
     background-color: #0056b3; /* Darker blue on hover */
+}
+/* Change the color of the hamburger icon */
+.navbar-toggler {
+    border-color: whitesmoke; /* Remove border color */
+}
+
+.navbar-toggler-icon {
+    background-color: bisque; /* Change this to your desired color */
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-color: #ffcc00; /* Change this to a hover color if needed */
+}
+.hero-section {
+    background-image: url('./2024 Bag.jpg'); /* Set your background image */
+    background-repeat: repeat-x; /* Repeat the image horizontally */
+    background-size: auto 100%; /* Adjust the size as necessary */
+    position: relative; /* Relative positioning for child elements */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Hide overflow for smooth animation */
+    display: flex; /* Flexbox to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white; /* Change text color for better visibility */
+    animation: slide 20s linear infinite; /* Move background smoothly */
+}
+
+.hero-content {
+    position: absolute; /* Position content absolutely */
+    text-align: center; /* Center align text */
+}
+
+/* Keyframes for sliding effect */
+@keyframes slide {
+    from {
+        background-position: 0 0; /* Start from the left */
+    }
+    to {
+        background-position: 100% 0; /* Move to the right */
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .hero-section {
+        animation-duration: 15s; /* Faster for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        animation-duration: 10s; /* Even faster for mobile devices */
+        background-size: cover; /* Ensure background covers the section */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        animation-duration: 8s; /* Fastest for extra small devices */
+        background-size: cover; /* Ensure background covers the section */
+    }
+}
+
+.hero-content h1, .hero-content p {
+    z-index: 1; /* Ensure text is above the background */
 }
